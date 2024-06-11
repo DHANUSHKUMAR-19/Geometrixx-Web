@@ -42,8 +42,9 @@
 
         checkoutButton.addEventListener("click", () => {
     // Extract details (replace with actual selectors)
-    const productName = document.querySelector(".Name").textContent;
-    const productPrice = document.querySelector(".Price").textContent;
+    const itemContainer = document.querySelector(".itemContainer");
+    const productName = itemContainer.querySelector(".Name").textContent;
+    const productPrice = itemContainer.querySelector(".Price").textContent;
 
     // Create an object for the product
     const productObj = {
