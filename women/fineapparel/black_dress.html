@@ -42,6 +42,29 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
+            function ctaClickEvent(){
+
+                window.geometData.push({
+                    "event":"ctaClick",
+                    "page":{
+                        "pageName": "Women:Fine Apparel:Black Dress",
+                        "siteSection": "Women",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "10",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "product": {
+                    "productID": "101340",
+                    "productName": "Black Dress",
+                    "productPrice":"$3290.00"
+            },
+
+                });
+                return true
+
+            }
 
 </script>
 
@@ -233,7 +256,7 @@
                 <p><span class="cart">
 
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Black Dress','price=3290.00','image=https://ats-sb.adobe.com/jjsite/include/dress.jpg');" name="sku" value="101340" class="button">ADD TO CART</button>
+<button type=submit onclick="ctaClickEvent();simpleCart.add('name=Black Dress','price=3290.00','image=https://ats-sb.adobe.com/jjsite/include/dress.jpg');" name="sku" value="101340" class="button">ADD TO CART</button>
 </form>
 
 </span>
