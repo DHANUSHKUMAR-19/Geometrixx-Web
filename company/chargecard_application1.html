@@ -41,9 +41,42 @@
                             },
                         "user":{
                             "userID" : userID,
-                            "loginStatus" : "Loggedin"
-                        }
+                            ",loginStatus" : "Loggedin"
+                        },
+                        cards:{
+            "cardType":"HC",
+            "employer":"HC",
+            "jobDescription":"HC",
+            "yearlySalary":"HC ",
+            "yearsEmployed":"HC"
+
+        }
+
+            });
+                    function ctaClickEvent(){
+
+                        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Company:Geo Charge Card Step 1",
+                            "siteSection": "Company",
+                            "siteSubsection": "Geometrixx Clothiers Site",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            ",loginStatus" : "Loggedin"
+                        },
+                        cards:{
+            "cardType":"HC",
+            "employer":"HC",
+            "jobDescription":"HC",
+            "yearlySalary":"HC ",
+            "yearsEmployed":"HC"
+
+        }
+
                     });
+                    }
  
     </script>
     <!-- <script>
@@ -451,7 +484,7 @@ Geometrixx Charge Card Application
                                     </td>
                                     <td>
                                         <!-- change type from submit to button -->
-                                        <input type="submit" value="Continue" id="continueButton" class="button">
+                                        <input type="submit" value="Continue" id="continueButton" class="button" onclick="ctaClickEvent()">
                                     </td>
                                 </tr>
 
