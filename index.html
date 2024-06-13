@@ -85,6 +85,24 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
+    function ctaClickEvent(){
+        window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Home",
+                        "siteSection": "Home",
+                        "siteSubsection": "Home",
+                        },
+                    "user":{
+                        "userID" : "1234",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "cta":{
+                        "ctaName":'go',
+                        "ctaPosition":'header'
+                    }
+                });
+    }
 
 </script>
 
@@ -138,7 +156,8 @@
 
 			<form action="search/searchresults.html">
 			<input type="text" id="searchfield" name="q" />
-			<input type="submit" Value="Go" class="button">
+			<input type="submit" Value="Go" class="button" onclick="ctaClickEvent()">
+
 
 		<!--	<form id="searchform" action="" method="post" name="cf">
 			<input type="text" id="searchfield" name="searchfield" value="" />
