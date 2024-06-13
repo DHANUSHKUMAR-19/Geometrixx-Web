@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,6 +24,25 @@
                 productName: "Hooded Sweater"
             },
         };
+    </script> -->
+
+    <script>
+        var userID = window.localStorage.getItem("userID");
+ 
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Men:Activewear:Hooded Sweater",
+                            "siteSection": "Activewear",
+                            "siteSubsection": "Home",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            "loginStatus" : "Loggedin"
+                        }
+                    });
+ 
     </script>
 
 

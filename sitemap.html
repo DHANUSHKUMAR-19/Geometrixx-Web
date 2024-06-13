@@ -22,6 +22,25 @@
         };
     </script>
 
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Site Map",
+                        "siteSection": "Site Map",
+                        "siteSubsection": "Site Map",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
+
     <title>Geometrixx Clothiers|Company|Site Map</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="noindex, nofollow">

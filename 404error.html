@@ -20,6 +20,25 @@
         };
     </script>
 
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "home",
+                        "siteSection": "Home",
+                        "siteSubsection": "Home",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
+
     <title>Geometrixx|404 Error — Page Not Found</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="noindex, nofollow">

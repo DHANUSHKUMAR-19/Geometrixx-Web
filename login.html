@@ -7,7 +7,7 @@
 
     <!--Place DTM header above this-->
     
-	<script>
+	<!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -20,9 +20,29 @@
                 loginStatus: "",
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Login",
+                        "siteSection": "Login",
+                        "siteSubsection": "Login",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 	
 <script>
+
 
 function logIn() {
 document.getElementById("loginStatus").innerHTML = "Welcome to Geometrixx! You're logged in!";

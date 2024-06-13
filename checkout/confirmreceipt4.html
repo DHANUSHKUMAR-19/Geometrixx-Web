@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -26,7 +26,25 @@
 			productTax: "235.00",
 			productPostage: "50"
 	    },		
-        };
+        }; -->
+    </script>
+    <script>
+        var userID = window.localStorage.getItem("userID");
+ 
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Checkout:Order Confirmation Step 4",
+                            "siteSection": "Checkout",
+                            "siteSubsection": "Home",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            "loginStatus" : "Loggedin"
+                        }
+                    });
+ 
     </script>
 
 

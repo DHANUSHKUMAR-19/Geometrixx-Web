@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,6 +24,24 @@
                 productName: "Corduroy Blazer"
             },
         };
+    </script> -->
+    <script>
+        var userID = window.localStorage.getItem("userID");
+ 
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Men:Activewear:Corduroy Blazer",
+                            "siteSection": "Men",
+                            "siteSubsection": "Activewear",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            "loginStatus" : "Loggedin"
+                        }
+                    });
+ 
     </script>
 
     <title>Geometrixx|Men|Activewear|Corduroy Blazer</title>

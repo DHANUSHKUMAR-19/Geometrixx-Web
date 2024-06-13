@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -20,7 +20,26 @@
                 server: "Geometrixx Clothiers Site"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Men:Activewear",
+                        "siteSection": "Men",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 
     <title>Geometrixx|Men|Activewear</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

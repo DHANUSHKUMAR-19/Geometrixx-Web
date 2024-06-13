@@ -10,18 +10,176 @@
     <!--Place DTM header above this-->
 
 
-    <script>
-        var digitalData = digitalData || {};
+    <!-- <script>
+        var digitalData = digitalData || [];
         digitalData = {
             page: {
                 pageName: "Company:Geo Charge Card Step 1",
                 siteSection: "Company",
                 server: "Geometrixx Clothiers Site"
             },
+            cards:{
+            cardType:" ",
+            employer:" ",
+            jobDescription:" ",
+            yearlySalary:" ",
+            yearsEmployed:" "
+
+        }
         };
-    </script>
+    </script> -->
     <script>
-        var cardType=document.querySelector('input[name="search_title"]:checked').value;
+        var userID = window.localStorage.getItem("userID");
+ 
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Company:Geo Charge Card Step 1",
+                            "siteSection": "Company",
+                            "siteSubsection": "Geometrixx Clothiers Site",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            "loginStatus" : "Loggedin"
+                        }
+                    });
+ 
+    </script>
+    <!-- <script>
+        // var cardType=document.querySelector('input[name=search_title]:checked').value;
+        var cardType=document.getElementById('search_title').value      
+        
+    </script> -->
+     <!-- <script>
+        // Get all radio buttons with name "cardtype"
+        var radioButtons = document.getElementsByName('cardtype');
+    
+        // Loop through all radio buttons
+        for (var i = 0; i < radioButtons.length; i++) {
+            // Add event listener to each radio button
+            radioButtons[i].addEventListener('change', function() {
+                // Check if the radio button is checked
+                if (this.checked) {
+                    // Print the value of the checked radio button
+                    console.log(this.value);
+                }
+            });
+        }
+    </script> -->
+    <!-- <script>
+
+function logInitialCheckedValue() {
+        // Get all radio buttons with name "cardtype"
+        var radioButtons = document.getElementsByName('cardtype');
+
+        // Loop through all radio buttons
+        for (var i = 0; i < radioButtons.length; i++) {
+            // Check if the radio button is checked
+            if (radioButtons[i].checked) {
+                // Log the value of the checked radio button
+                console.log("Initially Checked Value:", radioButtons[i].value);
+                break; // Exit loop once a checked radio button is found
+            }
+        }
+    }
+        document.addEventListener('DOMContentLoaded', function() {
+        // Get all radio buttons with name "cardtype"
+        var radioButtons = document.getElementsByName('cardtype');
+
+        // Loop through all radio buttons
+        for (var i = 0; i < radioButtons.length; i++) {
+            // Add event listener to each radio button
+            radioButtons[i].addEventListener('change', function() {
+                // Check if the radio button is checked
+                if (this.checked) {
+                    // Print the value of the checked radio button
+                    console.log(this.value);
+                }
+            });
+        }
+    });
+    </script> -->
+
+  
+
+    <script>
+        // Wait for the DOM to be fully loaded
+        var checkedCardType;
+        document.addEventListener('DOMContentLoaded', ()=> {
+            // Function to log the initially checked radio button value
+            function logInitialCheckedValue() {
+                // Get all radio buttons with name "cardtype"
+                var radioButtons = document.getElementsByName('cardtype');
+    
+                // Loop through all radio buttons
+                for (var i = 0; i < radioButtons.length; i++) {
+                    // Check if the radio button is checked
+                    if (radioButtons[i].checked) {
+                        // Log the value of the checked radio button
+                        console.log("Initially Checked Value:", radioButtons[i].value);
+                        checkedCardType=radioButtons[i].value
+                        break; // Exit loop once a checked radio button is found
+                    }
+                }
+            }
+    
+            // Log the initially checked radio button value
+            logInitialCheckedValue();
+    
+            // Add event listeners to radio buttons to log value when changed
+            var radioButtons = document.getElementsByName('cardtype');
+            for (var i = 0; i < radioButtons.length; i++) {
+                radioButtons[i].addEventListener('change', function() {
+                    console.log("Selected Value:", this.value);
+                    checkedCardType=this.value
+                });
+            }
+        });
+        
+    </script>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        var button=document.getElementById("continueButton")
+        // .addEventListener("submit", ()=> {
+        //     console.log(cards)
+        button.addEventListener('click', ()=> {
+                // Action to perform when the button is clicked
+                // alert("button Clicked")
+                // digitalData.cards.cardType='Geo'
+                
+                // digitalData.cards.employer="cred"
+                // digitalData.cards.jobDescription='a'
+                // digitalData.cards.yearlySalary='1000'
+                // digitalData.cards.yearsEmployed='10'
+                
+                // cards.cardType='Geo'
+                // cards.employer="cred"
+                // cards.jobDescription='a'
+                // cards.yearlySalary='1000'
+                // cards.yearsEmployed='10'
+
+        })
+    })
+    </script>
+      <script>
+        // document.getElementById("continueButton").addEventListener("click", function() {
+        //     // Retrieve the values from the input fields
+        //     var form = document.getElementById("myForm");
+        //     cardType = document.getElementByName("cardtype").value;
+        //     employer = document.getElementByName("employer").value;
+        //     jobDescription = document.getElementById("message").value;
+        //     yearlySalary = document.getElementById("message").value;
+        //     yearsEmployed = document.getElementById("message").value;
+    
+        //     // Do something with the captured data (for example, log it to the console)
+        //     console.log("Name:", cardType);
+        //     console.log("Email:", employer);
+        //     console.log("Message:", message);
+    
+        //     // Here you can perform further actions with the captured data, such as sending it to a server
+        // });
     </script>
 
 
@@ -204,6 +362,8 @@ Geometrixx Charge Card Application
 
                         <div class="form">
                             <form action="chargecard_application2.html">
+                            <!-- <form> -->
+
 
 
                                 <tr>
@@ -290,12 +450,14 @@ Geometrixx Charge Card Application
                                     <td>
                                     </td>
                                     <td>
-                                        <input type="submit" value="Continue" class="button">
+                                        <!-- change type from submit to button -->
+                                        <input type="submit" value="Continue" id="continueButton" class="button">
                                     </td>
                                 </tr>
 
                             </form>
                         </div>
+                       
 
                 </td>
                 </tr>

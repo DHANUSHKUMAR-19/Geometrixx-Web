@@ -9,7 +9,7 @@
     <script src="https://assets.adobedtm.com/6a9bc2d85574/fe45c02029b3/launch-5c402ca535a4-development.min.js" async></script>
     <!--Place DTM header above this-->
 
-
+<!-- 
     <script>
         var digitalData = digitalData || {};
         digitalData = {
@@ -24,7 +24,26 @@
                 productName: "Tie-Waist Puffer Jacket"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Women:Activewear:Tie-Waist Puffer Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 
     <title>Geometrixx|Women|Activewear|Tie-Waist Puffer Jacket</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

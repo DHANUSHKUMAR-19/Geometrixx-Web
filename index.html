@@ -42,7 +42,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -67,7 +67,26 @@
     }
   ],
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Home",
+                        "siteSection": "Home",
+                        "siteSubsection": "Home",
+                        },
+                    "user":{
+                        "userID" : "1234",
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 
     <title>Geometrixx Clothiers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

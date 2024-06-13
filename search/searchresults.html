@@ -24,7 +24,7 @@
 
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -35,6 +35,25 @@
                 searchTerm: searchTerm
             },
         };
+    </script> -->
+
+    <script>
+        var userID = window.localStorage.getItem("userID");
+ 
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                        "event":"pageView",
+                        "page":{
+                            "pageName": "Search Results",
+                            "siteSection": "Search Results",
+                            "siteSubsection": "Search Results",
+                            },
+                        "user":{
+                            "userID" : userID,
+                            "loginStatus" : "Loggedin"
+                        }
+                    });
+ 
     </script>
 
 

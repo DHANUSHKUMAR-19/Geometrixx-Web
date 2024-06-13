@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,7 +24,26 @@
                 productName: "Front-Zip Ski Jacket"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Women:Activewear:Front-Zip Ski Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 
     <title>Geometrixx|Women|Activewear|Front-Zip Ski Jacket</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

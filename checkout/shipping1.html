@@ -11,7 +11,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -20,7 +20,26 @@
                 server: "Geometrixx Clothiers Site"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Checkout:Shipping Step 1",
+                        "siteSection": "Checkout",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : userID,
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+
+</script>
 
 
     <title>Geometrixx|Checkout|Shipping Step 1</title>
