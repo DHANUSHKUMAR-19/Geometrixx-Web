@@ -10,7 +10,7 @@
 <!--Place DTM header above this-->
 
 
-<script>
+<!-- <script>
     var digitalData = digitalData || {};
     digitalData = {
         page: {
@@ -19,6 +19,47 @@
             server: "Geometrixx Clothiers Site"
         },
     };
+</script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Men",
+                        "siteSection": "Men",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "2",
+                        "loginStatus" : "Loggedin"
+                    },
+                });
+
+                function ctaClickEvent(){
+                    window.geometData.push({
+                    "event":"ctaClick",
+                    "page":{
+                        "pageName": "Men",
+                        "siteSection": "Men",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "2",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "cta":{
+                        "ctaName":'mens Page',
+                        "ctaPosition":'Body'
+                    }
+
+                });
+
+
+                }
+
 </script>
 
     <title>Geometrixx|Men</title>
@@ -99,7 +140,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()" onclick="ctaClickEvent()">MEN</a>
                                     <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
                                         <a href="../men/activewear/activewear.html">Activewear</a>
                                         <a href="../men/fineapparel/fineapparel.html">Fine Apparel</a>
