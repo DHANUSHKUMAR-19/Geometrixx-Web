@@ -30,18 +30,38 @@
     var userID = window.localStorage.getItem("userID");
 
     window.geometData = window.geometData || [];
+    // window.geometData.push({
+    //                 "event":"pageView",
+    //                 "page":{
+    //                     "pageName": "Men:Fine Apparel:Blue Shirt",
+    //                     "siteSection": "Men",
+    //                     "siteSubsection": "Fine Apparel",
+    //                     },
+    //                 "user":{
+    //                     "userID" : userID,
+    //                     "loginStatus" : "Loggedin"
+    //                 }
+    //             });
     window.geometData.push({
-                    "event":"pageView",
+                    "event":"productView",
                     "page":{
                         "pageName": "Men:Fine Apparel:Blue Shirt",
                         "siteSection": "Men",
                         "siteSubsection": "Fine Apparel",
                         },
                     "user":{
-                        "userID" : userID,
-                        "loginStatus" : "Loggedin"
-                    }
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": {
+                "productID": "201241",
+                "productName": "Blue Shirt"
+            },
                 });
+
+                // function productViewEvent(){
+                   
+                // }
 
 </script>
 
