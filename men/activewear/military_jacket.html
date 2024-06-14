@@ -11,7 +11,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -25,7 +25,48 @@
                 productName: "Military Jacket"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Men:Activewear:Military Jacket",
+                        "siteSection": "Men",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    }
+                });
+                function ctaClickEvent(){
+                    window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Men:Activewear:Hooded Sweater",
+                        "siteSection": "Men",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "product": {
+                "productID": "200241",
+                "productName": "Military Jacket",
+                "productPrice":'$750'
+        },
+
+                });
+                return true
+
+                }
+
+</script>
 
     <title>Geometrixx|Men|Activewear|Military Jacket</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -210,7 +251,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Military Jacket','price=750.00','image=https://ats-sb.adobe.com/jjsite/include/active_men.jpg');" name="sku" value="200241" class="button">ADD TO CART</button>
+<button type=submit onclick="ctaClickEvent();simpleCart.add('name=Military Jacket','price=750.00','image=https://ats-sb.adobe.com/jjsite/include/active_men.jpg');" name="sku" value="200241" class="button">ADD TO CART</button>
 </form>
 
 </span>
