@@ -41,7 +41,7 @@
                             "loginStatus" : "Loggedin"
                         }
                     });
-        function ctaClickEvent(){
+        function addToCartEvent(){
 
             window.geometData.push({
                         "event":"addToCart",
@@ -261,7 +261,7 @@
 <form action="../../checkout/shoppingcart.html">
     <!-- <form > -->
     <!-- changed type from submit to button -->
-<button type=submit onclick="ctaClickEvent();simpleCart.add('name=Corduroy Blazer','price=709.99','image=https://ats-sb.adobe.com/jjsite/include/fa_man.jpg');" name="sku" value="200240" class="button" >ADD TO CART</button>
+<button type=submit onclick="addToCartEvent();simpleCart.add('name=Corduroy Blazer','price=709.99','image=https://ats-sb.adobe.com/jjsite/include/fa_man.jpg');" name="sku" value="200240" class="button" >ADD TO CART</button>
 </form>
 </span>
                                 <p />
