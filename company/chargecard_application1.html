@@ -56,7 +56,7 @@
                             "siteSubsection": "Geometrixx Clothiers Site",
                             },
                         "user":{
-                            "userID" : userID,
+                            "userID" : "1",
                             ",loginStatus" : "Loggedin"
                         },
                         cards:{
@@ -69,6 +69,7 @@
         }
 
                     });
+                    return true
                     }
  
     </script>
@@ -477,7 +478,7 @@ Geometrixx Charge Card Application
                                     </td>
                                     <td>
                                         <!-- change type from submit to button -->
-                                        <input type="submit" value="Continue" id="continueButton" class="button" onclick="ctaClickEvent()">
+                                        <input type="submit" value="Continue" id="continueButton" class="button" onclick="return ctaClickEvent()">
                                     </td>
                                 </tr>
 
