@@ -36,6 +36,34 @@
                                 "loginStatus" : "Loggedin"
                             }
                         });
+function creditCardCompletionEvent(){
+
+window.geometData.push({
+"event":"creditCardAppCompleted",
+"page":{
+    "pageName": "Company:Geo Charge Card Step 1",
+    "siteSection": "Company",
+    "siteSubsection": "Geometrixx Clothiers Site",
+    },
+"user":{
+    "userID" : "1",
+    ",loginStatus" : "Loggedin"
+},
+"cta":{
+"ctaName":"Credit Card Continue",
+"ctaPosition":"Bottom"
+},
+"details":{
+    'city':'Caxias do Sul',
+    'state':'Rio Grande do Sul',
+    'postalCode':'95020-520',
+    'country':'Brazil'
+}
+
+
+});
+return true
+}
      
         </script>
 
@@ -578,7 +606,7 @@
                                     <td>
                                     </td>
                                     <td>
-                                        <a href="https://ats-sb.adobe.com/jjsite/include/include/charge_card_site.php" class="button2" onClick="">Proceed to Apply</a>
+                                        <a href="https://ats-sb.adobe.com/jjsite/include/include/charge_card_site.php" class="button2" onClick="return creditCardCompletionEvent()">Proceed to Apply</a>
 
                                     </td>
                                 </tr>
