@@ -40,6 +40,33 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
+                function checkoutEvent(){
+
+                    window.geometData.push({
+                    "event":"checkOut",
+                    "page":{
+                        "pageName": "Checkout:Shopping Cart",
+                        "siteSection": "Checkout",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    'product':{
+                        "productID": "200240",
+                        "productName": "Corduroy Blazer",
+                        "productPrice":'$709.99',
+                        "productQty":'1',
+                        'productTotal':'$709.99'
+            },
+
+                });
+
+                    
+
+
+                }
 
 </script>
 
@@ -225,7 +252,7 @@
 
 
                             <div class="itemContainer">
-                                <div class="itemImage">Image</div>
+                                <!-- <div class="itemImage">Image</div> -->
                                 <div class="itemName">Name</div>
                                 <div class="itemPrice">Price</div>
                                 <div class="itemQuantity">Quantity</div>
@@ -250,7 +277,7 @@
 
             <div>
                 <form action="shipping1.html">
-                    <input type="submit" value="CHECKOUT NOW!" class="button" >
+                    <input type="submit" value="CHECKOUT NOW!" class="button" onclick="checkoutEvent()">
                 </form>
             </div>
 
