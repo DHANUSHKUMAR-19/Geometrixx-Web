@@ -37,6 +37,27 @@
                             "loginStatus" : "Loggedin"
                         }
                     });
+                    function next(){
+                        window.geometData.push({
+                        "event":"payment",
+                        "page":{
+                            "pageName": "Checkout:Payment Step 2",
+                            "siteSection": "Checkout",
+                            "siteSubsection": " ",
+                            },
+                        "user":{
+                            "userID" : "1",
+                            "loginStatus" : "Loggedin"
+                        },
+                        'paymentInfo':{
+                            'paymentMethod':"American Express",
+                            // add any addition if needed
+                        }
+                    });
+
+                        
+
+                    }
  
     </script>
 
@@ -324,7 +345,7 @@
 
                             <tr>
                                 <td>
-                                    <input type="submit" value="Next" class="button">
+                                    <input type="submit" value="Next" class="button" onclick="return next()">
                                 </td>
 
                             </tr>
