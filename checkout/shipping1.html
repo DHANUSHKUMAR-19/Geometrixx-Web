@@ -21,8 +21,31 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
+                function next(){
+
+                    window.geometData.push({
+                    "event":"checkOut",
+                    "page":{
+                        "pageName": "Checkout:Shipping Step 1",
+                        "siteSection": "Checkout",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "details":{
+                        'city':'Lehi',
+                        'sate':'Utah',
+                        'postalCode':'84043',
+                        'country':"United States of America"
+                    }
+                });
+                return true
+                }
 
 </script>
+
 
 <script src="https://assets.adobedtm.com/6a9bc2d85574/fe45c02029b3/launch-5c402ca535a4-development.min.js" async></script>
 
@@ -562,7 +585,7 @@
 
                                 <tr>
                                     <td>
-                                        <input type="submit" value="Next" class="button">
+                                        <input type="submit" value="Next" class="button" onclick="next()">
                                     </td>
                                 </tr>
 
