@@ -37,6 +37,25 @@
                     }
                 });
 
+                function subscribe(){
+
+                    window.geometData.push({
+                    "event":"subscription",
+                    "page":{
+                        "pageName": "Company:Newsletter Subscription Start",
+                        "siteSection": "Company",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    'newsletter':['Geo Fashion','Geo Travel','Geo Buisness','Weekly Coupons']
+                });
+
+
+                }
+
 </script>
 
     <title>Geometrixx|Company|Newsletter Subscription Start</title>
@@ -328,7 +347,7 @@ Sign Up for our the Geometrixx Newsletter!
                                     <td>
                                     </td>
                                     <td>
-                                        <input type="submit" value="Subscribe" class="button">
+                                        <input type="submit" value="Subscribe" class="button" onclick="subscribe">
                                     </td>
                                 </tr>
 
