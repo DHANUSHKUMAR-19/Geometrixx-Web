@@ -10,15 +10,30 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Company:Newsletter Subscription Completion",
-                siteSection: "Company",
-                server: "Geometrixx Clothiers Site"
-            },
-        };
+        // var digitalData = digitalData || {};
+        // digitalData = {
+        //     page: {
+        //         pageName: "Company:Newsletter Subscription Completion",
+        //         siteSection: "Company",
+        //         server: "Geometrixx Clothiers Site"
+        //     },
+        // };
+
+        window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"subscriptionCompleted",
+                    "page":{
+                        "pageName": "Company:Newsletter Subscription Start",
+                        "siteSection": "Company",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    }
+                });
     </script>
+
 
 
     <title>Geometrixx|Company|Newsletter Subscription Completion</title>
