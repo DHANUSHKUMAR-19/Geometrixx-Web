@@ -32,7 +32,7 @@
 
     window.geometData = window.geometData || [];
     window.geometData.push({
-                    "event":"pageView",
+                    "event":"productView",
                     "page":{
                         "pageName": "Men:Activewear:Military Jacket",
                         "siteSection": "Men",
@@ -41,7 +41,15 @@
                     "user":{
                         "userID" : "1",
                         "loginStatus" : "Loggedin"
-                    }
+                    },
+                    "product":[ {
+                    "productID": "200241",
+                    "productName": "Military Jacket",
+                    "productPrice":"$750",
+                    "productCategory":"men",
+                    "productQty":"1",
+                    "productTotal":"$750"
+            }]
                 });
                 function addToCartEvent(){
                     window.geometData.push({
@@ -55,11 +63,14 @@
                         "userID" : "1",
                         "loginStatus" : "Loggedin"
                     },
-                    "product": {
-                "productID": "200241",
-                "productName": "Military Jacket",
-                "productPrice":'$750'
-        },
+                    "product":[ {
+                    "productID": "200241",
+                    "productName": "Military Jacket",
+                    "productPrice":"$750",
+                    "productCategory":"men",
+                        "productQty":"4",
+                        "productTotal":"$3000"
+            }]
 
                 });
                 return true
