@@ -26,6 +26,59 @@
         };
     </script>
 
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+
+    window.geometData.push({
+                    "event":"productView",
+                    "page":{
+                        "pageName": "Men:Fine Apparel:Tuxedo",
+                        "siteSection": "Men",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "201233",
+                "productName": "Tuxedo",
+                "productPrice":'$2600.00',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$2600.00'
+            }]
+                });
+        function addToCartEvent(){
+
+            window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Men:Fine Apparel:Tuxedo",
+                        "siteSection": "Men",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "201244",
+                "productName": "Tuxedo",
+                "productPrice":'$2600.00',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$2600.00'
+            }]
+                });
+                return true
+
+        }
+
+</script>
+
     <title>Geometrixx|Men|Fine Apparel|Tuxedo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="robots" content="noindex, nofollow">

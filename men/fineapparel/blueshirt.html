@@ -53,11 +53,40 @@
                         "userID" : "1",
                         ",loginStatus" : "Loggedin"
                     },
-                    "product": {
+                    "product": [{
                 "productID": "201241",
-                "productName": "Blue Shirt"
-            },
+                "productName": "Blue Shirt",
+                "productPrice":'$289.99',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$289.99'
+            }],
                 });
+        function addToCartEvent(){
+
+            window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Men:Fine Apparel:Blue Shirt",
+                        "siteSection": "Men",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "201241",
+                "productName": "Blue Shirt",
+                "productPrice":'$289.99',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$289.99'
+            }],
+                });
+                return true
+
+        }
 
                 // function productViewEvent(){
                    
@@ -284,7 +313,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Blue Shirt','price=289.99','image=https://ats-sb.adobe.com/jjsite/include/man-apparel4.jpg');" name="sku" value="201241" class="button">ADD TO CART</button>
+<button type=submit onclick="addToCartEvent();simpleCart.add('name=Blue Shirt','price=289.99','image=https://ats-sb.adobe.com/jjsite/include/man-apparel4.jpg');" name="sku" value="201241" class="button" >ADD TO CART</button>
 </form>
 </span>
                     <p />
