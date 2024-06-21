@@ -29,13 +29,57 @@ window.geometData.push({
                 "page":{
                     "pageName": "Checkout:Order Review Step 3",
                     "siteSection": "Checkout",
-                    "siteSubsection": "",
+                    //"siteSubsection": "",
                     },
                 "user":{
                     "userID" : "1",
                     "loginStatus" : "Loggedin"
                 }
             });
+            function purchaseEvent(){
+
+console.log("Checkout event clicked")
+
+window.geometData.push({
+"event":"checkOut",
+"page":{
+    "pageName": "Checkout:Shopping Cart",
+    "siteSection": "Checkout",
+    "siteSubsection": "",
+    },
+"user":{
+    "userID" : "1",
+    "loginStatus" : "Loggedin"
+},
+'product':[{
+    "productID": "200240",
+    "productCategory":'men',
+    "productName": "Two-button Suit",
+    "productPrice":'$1850.00',
+    "productQty":'1',
+    'productTotal':'$1850.00'
+},
+{
+    "productID": "201241",
+    "productCategory":'men',
+    "productName": "Blue Shirt",
+    "productPrice":'$289.99',
+    "productQty":'1',
+    'productTotal':'$289.99'
+},
+{
+    "productID": "201244",
+    "productCategory":'men',
+    "productName": "French Cuff Shirt",
+    "productPrice":'$309.99',
+    "productQty":'1',
+    'productTotal':'$309.99'
+}]
+
+});
+return true
+
+}
     </script>
     <script src="https://assets.adobedtm.com/6a9bc2d85574/fe45c02029b3/launch-5c402ca535a4-development.min.js" async></script>
 
@@ -233,7 +277,7 @@ window.geometData.push({
                 <tr>
                     <td>
                         <form action="confirmreceipt4.html">
-                            <input type="submit" value="PURCHASE" class="button">
+                            <input type="submit" value="PURCHASE" class="button" onclick="purchaseEvent()">
                         </form>
                     </td>
                 </tr>
