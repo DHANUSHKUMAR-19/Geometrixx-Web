@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,7 +24,61 @@
                 productName: "Two-Button Suit"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+
+    window.geometData.push({
+                    "event":"productView",
+                    "page":{
+                        "pageName": "Men:Fine Apparel:Two-Button Suit",
+                        "siteSection": "Men",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "201240",
+                "productName": "Two-Button Suit",
+                "productPrice":'$1850.00',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$1850.00'
+            }]
+                });
+        function addToCartEvent(){
+
+            window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Men:Fine Apparel:Tuxedo",
+                        "siteSection": "Men",
+                        "siteSubsection": "Fine Apparel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "201240",
+                "productName": "Two-Button Suit",
+                "productPrice":'$1850.00',
+                        "productCategory":'men|fineapparel',
+                        "productQty":'1',
+                        'productTotal':'$1850.00'
+            }]
+                });
+                return true
+
+        }
+
+</script>
+
 
     <title>Geometrixx|Men|Fine Apparel|Two-Button Suit</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -207,7 +261,7 @@
                 If you need a suit, this is the one you need.
                 <p><span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Two-button Suit','price=1850.00','image=https://ats-sb.adobe.com/jjsite/include/fa_man.jpg');" name="sku" value="201240" class="button">ADD TO CART</button>
+<button type=submit onclick="addToCartEvent();simpleCart.add('name=Two-button Suit','price=1850.00','image=https://ats-sb.adobe.com/jjsite/include/fa_man.jpg');" name="sku" value="201240" class="button">ADD TO CART</button>
 </form>
 </span>
                     <p />
