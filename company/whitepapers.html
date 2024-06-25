@@ -11,15 +11,55 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Company:White Papers",
-                siteSection: "Company",
-                server: "Geometrixx Clothiers Site"
-            },
-        };
+        // var digitalData = digitalData || {};
+        // digitalData = {
+        //     page: {
+        //         pageName: "Company:White Papers",
+        //         siteSection: "Company",
+        //         server: "Geometrixx Clothiers Site"
+        //     },
+        // };
+
+
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Company:White Papers",
+                        "siteSection": "Company",
+                        "siteSubsection": "",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    }
+                })
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var links = document.querySelectorAll('a');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                var url = link.href;
+                console.log('User is being redirected to:', url);
+                
+                // Optionally send this data to your server
+                // var xhr = new XMLHttpRequest();
+                // xhr.open('POST', '/log', true);
+                // xhr.setRequestHeader('Content-Type', 'application/json');
+                // xhr.send(JSON.stringify({ url: url }));
+                
+                // Allow the default action to happen
+            });
+        });
+    });
+
+
+
+
     </script>
+
 
     <title>Geometrixx|Company|White Papers</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
