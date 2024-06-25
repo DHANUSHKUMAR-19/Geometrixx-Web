@@ -10,14 +10,56 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Company:Geo Travel Start",
-                siteSection: "Company",
-                server: "Geometrixx Clothiers Site"
-            },
-        };
+        // var digitalData = digitalData || {};
+        // digitalData = {
+        //     page: {
+        //         pageName: "Company:Geo Travel Start",
+        //         siteSection: "Company",
+        //         server: "Geometrixx Clothiers Site"
+        //     },
+        // };
+
+
+        var userID = window.localStorage.getItem("userID");
+ 
+ window.geometData = window.geometData || [];
+ window.geometData.push({
+                 "event":"travel_booking",
+                 "page":{
+                     "pageName": "Company:Geo Travel Start",
+                     "siteSection": "company",
+                     "siteSubsection": "travel",
+                     },
+                 "user":{
+                     "userID" : "1",
+                     "loginStatus" : "Loggedin"
+                 },
+                });
+
+            function bookNow(){
+
+
+                window.geometData.push({
+                    "event":"ctaClick",
+                    "page":{
+                        // "pageName": "Home/Men:FineApparel/Women:FineApparel/Geometrix ChargeCard",
+                        "pageName":"Company:Geo Travel Start",
+                        "siteSection": "company",
+                        "siteSubsection": "travel",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "cta":{
+                        "ctaName":"Book Now",
+                        "ctaPosition":"bottom"
+                    }
+                });
+
+
+
+            }
     </script>
 
 
@@ -308,7 +350,7 @@
                                     <td>
                                     </td>
                                     <td height="100px">
-                                        <input type="submit" value="Book Now" class="button" onclick="myDirectCallFunction()">
+                                        <input type="submit" value="Book Now" class="button" onclick="bookNow()">
                                     </td>
                                 </tr>
 
