@@ -49,12 +49,42 @@
                             "siteSubsection": "Search Results",
                             },
                         "user":{
-                            "userID" : userID,
+                            "userID" : "1",
                             "loginStatus" : "Loggedin"
                         }
                     });
+
+                    function ctaClickEvent(){
+
+                        window.geometData.push({
+                        "event":"ctaClick",
+                        "page":{
+                            "pageName": "Search Results",
+                            "siteSection": "Search Results",
+                            "siteSubsection": "Search Results",
+                            },
+                        "user":{
+                            "userID" : "1",
+                            "loginStatus" : "Loggedin"
+                        },
+                        "cta":{
+                        "ctaName":"search_result_click",
+                        "ctaPosition":"body"
+                    },
+                    "product":{
+                        "productName":"productNameNotDefined_SearchResults",
+
+                    },
+
+                    });
+
+
+
+                    }
  
     </script>
+
+
 
 
 
