@@ -10,14 +10,33 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Company:Geo Travel Completion",
-                siteSection: "Company",
-                server: "Geometrixx Clothiers Site"
-            },
-        };
+        // var digitalData = digitalData || {};
+        // digitalData = {
+        //     page: {
+        //         pageName: "Company:Geo Travel Completion",
+        //         siteSection: "Company",
+        //         server: "Geometrixx Clothiers Site"
+        //     },
+        // };
+
+
+ window.geometData = window.geometData || [];
+ window.geometData.push({
+                 "event":"travel_booking_completed",
+                 "page":{
+                     "pageName": "Company:Geo Travel Completion",
+                     "siteSection": "company",
+                     "siteSubsection": "travel",
+                     },
+                 "user":{
+                     "userID" : "1",
+                     "loginStatus" : "Loggedin"
+                 },
+                });
+
+
+
+
     </script>
 
     <title>Geometrixx|Company|Geo Travel Completion</title>
