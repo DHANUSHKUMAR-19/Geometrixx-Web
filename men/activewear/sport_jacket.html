@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,7 +24,7 @@
                 productName: "Sport Jacket"
             },
         };
-    </script>
+    </script> -->
 
 <script>
     var userID = window.localStorage.getItem("userID");
@@ -40,7 +40,16 @@
                     "user":{
                         "userID" : "1",
                         "loginStatus" : "Loggedin"
-                    }
+                    },
+                
+                    "product": {
+                "productID": "200244",
+                "productName": "Sport Jacket",
+                "productPrice":'$750',
+                "productColor":"Black & Red",
+                "productBrand":"Snitch",
+        },
+
                 });
                 function addToCartEvent(){
                     window.geometData.push({
