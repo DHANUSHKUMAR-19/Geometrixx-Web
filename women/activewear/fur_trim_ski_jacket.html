@@ -10,7 +10,7 @@
     <!--Place DTM header above this-->
 
 
-    <script>
+    <!-- <script>
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -24,7 +24,65 @@
                 productName: "Fur Trim Ski Jacket"
             },
         };
-    </script>
+    </script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"productView",
+                    "page":{
+                        "pageName": "Women:Activewear:Fur Trim Ski Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    
+                    "product": [{
+                "productID": "100241",
+                "productName": "Fur Trim Ski Jacket",
+                "productPrice":'$2259.99',
+                        "productCategory":'women|activewear',
+                        "productQty":'1',
+                        'productTotal':'$2259.99',
+                        "productColor":"white",
+                        "productBrand":"Allen Solly",
+            }]
+                    
+                });
+
+                function addToCart(){
+
+                    window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Women:Activewear:Fur Trim Ski Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "100241",
+                "productName": "Fur Trim Ski Jacket",
+                "productPrice":'$2259.99',
+                        "productCategory":'women|activewear',
+                        "productQty":'1',
+                        'productTotal':'$2259.99'
+            }]
+                });
+                return true
+
+                }
+
+</script>
+
 
     <title>Geometrixx|Women|Activewear|Fur Trim Ski Jacket</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -227,7 +285,7 @@
                             <p>
                                 <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Fur-Trim Ski Jacket','price=2259.99');" name="sku" value="100241" class="button">ADD TO CART</button>
+<button type=submit onclick="addToCart();simpleCart.add('name=Fur-Trim Ski Jacket','price=2259.99');" name="sku" value="100241" class="button">ADD TO CART</button>
 </form>  
 </span>
 

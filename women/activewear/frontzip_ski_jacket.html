@@ -26,7 +26,7 @@
         };
     </script> -->
 
-<script>
+<!-- <script>
     var userID = window.localStorage.getItem("userID");
 
     window.geometData = window.geometData || [];
@@ -42,6 +42,63 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
+
+</script> -->
+
+<script>
+    var userID = window.localStorage.getItem("userID");
+
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+                    "event":"productView",
+                    "page":{
+                        "pageName": "Women:Activewear:Front-Zip Ski Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        "loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "100244",
+                "productName": "Front-Zip Ski Jacket",
+                "productPrice":'$2259.99',
+                        "productCategory":'women|activewear',
+                        "productQty":'1',
+                        'productTotal':'$1714.99'
+            }]
+                    
+                });
+
+                function addToCart(){
+
+                    window.geometData.push({
+                    "event":"addToCart",
+                    "page":{
+                        "pageName": "Women:Activewear:Front-Zip Ski Jacket",
+                        "siteSection": "Women",
+                        "siteSubsection": "Activewear",
+                        },
+                    "user":{
+                        "userID" : "1",
+                        ",loginStatus" : "Loggedin"
+                    },
+                    "product": [{
+                "productID": "100244",
+                "productName": "Front-Zip Ski Jacket",
+                "productPrice":'$2259.99',
+                        "productCategory":'women|activewear',
+                        "productQty":'1',
+                        'productTotal':'$1714.99',
+                        
+                        "productColor":"Blue",
+                        "productBrand":"Zeel",
+            }]
+                });
+                return true
+
+                }
 
 </script>
 
