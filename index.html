@@ -85,11 +85,7 @@
                         "loginStatus" : "Loggedin"
                     }
                 });
-
-                
     function ctaClickEvent(_ctaName,_ctaPos){
-
-       // console.log("CTAClick Rule");
         window.geometData.push({
                     "event":"ctaClick",
                     "page":{
@@ -103,18 +99,15 @@
                         "loginStatus" : "Loggedin"
                     },
                     "cta":{
-                        //"ctaPage":"Home",
                         "ctaName":_ctaName,
                         "ctaPosition":_ctaPos
                     }
                 });
-            
-                
     }
-   
 
 
 </script>
+
 <script src="https://assets.adobedtm.com/6a9bc2d85574/fe45c02029b3/launch-5c402ca535a4-development.min.js" async></script>
 
 
@@ -131,6 +124,7 @@
             void(0)
         }
     </script>
+    <script src="https://assets.adobedtm.com/6a9bc2d85574/fe45c02029b3/launch-5c402ca535a4-development.min.js" async></script>
     <script language="JavaScript">
         <!--if (document.images) {pic1= new Image(200,70); pic1.src="https://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png";}//-->
     </script>
@@ -153,7 +147,7 @@
             <!--start logo and head-->
 
             <div class="head_logo">
-                <a href="index.html" onmouseover="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png'" onmouseout="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png'" onclick=" return ctaClickEvent('Geometrix Logo','top-left')">
+                <a href="index.html" onmouseover="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png'" onmouseout="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png'" onclick="return ctaClickEvent('Geometrix Logo','top-left')">
                     <img src="https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png" border="0" name="jj" />
                 </a>
                 <br />
