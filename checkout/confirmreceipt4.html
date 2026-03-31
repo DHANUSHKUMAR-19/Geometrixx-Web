@@ -29,62 +29,71 @@
         }; -->
     </script>
     <script>
-        var userID = window.localStorage.getItem("userID");
- 
-        window.geometData = window.geometData || [];
-        window.geometData.push({
-                        "event":"purchase",
-                        "paymentMethod": "visa",
-                        "purchaseID":"1234",
-                        "page":{
-                            "pageName": "Checkout:Order Confirmation Step 4",
-                            "siteSection": "Checkout",
-                            "siteSubsection": "",
-                            },
-                        "user":{
-                            "userID" : "1",
-                            "loginStatus" : "Loggedin"
-                        },
-                        
-	    "product":[ {
-			"productID": "201233",
-			"productName": "Tuxedo",
-            "productPrice":"2600",
+    var userID = window.localStorage.getItem("userID");
 
-			"productTotalRevenue": "2600.00",
-            "productCategory":'men|fineapparel',
-			"productTotalUnits": "1",
-			"productTax": "235.00",
-			"productPostage": "50"
-	    },
-        {
-			"productID": "201241",
-            "productName": "Blue Shirt",
-            "productPrice":"2600",
-			"productTotalRevenue": "289.00",
-            "productCategory":'men|fineapparel',
-			"productTotalUnits": "1",
-			"productTax": "235.00",
-			"productPostage": "50"
-	    },
-        {
-			"productID": "200240",
-            "productName": "Corduroy Blazer",
-            "productCategory":'men|fineapparel',
-            "productPrice":"2600",
-			"productTotalRevenue": "709.99",
-			"productTotalUnits": "1",
-			"productTax": "235.00",
-			"productPostage": "50"
-	    }
+    // Generate IDs (best practice for POC)
+    function generateId() {
+        return crypto.randomUUID();
+    }
 
+    var purchaseId = generateId();
+    var transactionId = generateId();
 
-    
-    ]
-                    });
- 
-    </script>
+    window.geometData = window.geometData || [];
+    window.geometData.push({
+        "event": "purchase",
+        "paymentMethod": "visa",
+        "purchaseID": purchaseId,
+        "transactionID": transactionId,
 
+        "page": {
+            "pageName": "Checkout:Order Confirmation Step 4",
+            "siteSection": "Checkout",
+            "siteSubsection": ""
+        },
+
+        "user": {
+            "userID": userID || "1",
+            "loginStatus": "Loggedin"
+        },
+
+        "product": [
+            {
+                "productID": "201233",
+                "productName": "Tuxedo",
+                "productPrice": "2600",
+                "productTotalRevenue": "2600.00",
+                "productCategory": "men|fineapparel",
+                "productTotalUnits": "1",
+                "productTax": "235.00",
+                "productPostage": "50"
+            },
+            {
+                "productID": "201241",
+                "productName": "Blue Shirt",
+                "productPrice": "2600",
+                "productTotalRevenue": "289.00",
+                "productCategory": "men|fineapparel",
+                "productTotalUnits": "1",
+                "productTax": "235.00",
+                "productPostage": "50"
+            },
+            {
+                "productID": "200240",
+                "productName": "Corduroy Blazer",
+                "productCategory": "men|fineapparel",
+                "productPrice": "2600",
+                "productTotalRevenue": "709.99",
+                "productTotalUnits": "1",
+                "productTax": "235.00",
+                "productPostage": "50"
+            }
+        ]
+    });
+
+    console.log("PurchaseID:", purchaseId);
+    console.log("TransactionID:", transactionId);
+</script>
 
     <title>Geometrixx|Checkout|Order Confirmation Step 4</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
